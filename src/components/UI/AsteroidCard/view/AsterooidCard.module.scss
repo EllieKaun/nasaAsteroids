@@ -1,0 +1,90 @@
+.wrapper{ 
+    height: 120px;
+    margin-bottom: 24px;
+}
+
+p{
+    margin: 0 !important;
+}
+
+.date{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.dataBlock{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.distanceBlock{
+    margin-right: 8px;
+    position: relative;
+}
+
+.distance{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.arrow{
+    height: 2px;
+    width: 100%;
+    background-color: lightgrey;
+}
+.arrowRight {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid lightgrey;
+    position: absolute;
+    top: 50%;
+    right: -2px;
+}
+
+.arrowLeft {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 8px solid lightgrey;
+    position: absolute;
+    top: 50%;
+    left: -1px
+}
+
+.nameBlock{
+    margin-left: 8px;
+}
+
+.name{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: underline;
+}
+
+.diameter{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.order{
+    display: flex;
+    align-items: center;
+    img{
+        margin-left: 10px;
+    }
+}
+
+.asteroidSmall{
+    width: 22px;
+    height: 22px;
+}
+
+.asteroidBig{
+    width: 40px;
+    height: 40px;
+}

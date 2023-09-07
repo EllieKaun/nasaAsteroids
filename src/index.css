@@ -14,3 +14,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.rc-dialog-content{
+  background-color: rgba(35, 37, 38, 1);
+  border-radius: 16px;
+  border: 1px solid #fff;
+}
+.rc-dialog-header{
+  background-color: rgba(35, 37, 38, 1);
+  border-radius: 16px;
+}
+
+.rc-dialog-title{
+  color: #fff
+}

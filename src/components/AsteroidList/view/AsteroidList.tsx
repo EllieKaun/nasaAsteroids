@@ -1,3 +1,4 @@
+import classes from './AsteroidList.module.scss';
 import { AsteroidCard } from '../../UI/AsteroidCard';
 import { getAsteroidList, getNextAsteroid } from '../model/AsteroidListModel';
 import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks';
@@ -40,18 +41,34 @@ const AsteroidList:FC = () => {
     dispatch(getNextAsteroid(asteroidList.links!.next));
   };
 
-  console.log(asteroidList);
-
   return (
     <>
+
       <InfiniteScroll
+        className={classes.scroll}
         dataLength={scrollableDataList.length}
         next={handleLoadNextData}
         hasMore={!!asteroidList.links?.next}
-        height={500}
-        loader={<>loader</>}
+        height={700}
+        loader={<p>loader</p>}
       >
-        {asteroidListData && asteroidListData.map((item: IAsteroidList, i: number) => (
+        <div className={classes.sortBlock}>
+          <p className={classes.title}>Ближайшие подлеты астероидов</p>
+          <div className={classes.typeBlock}>
+            <div
+              className={distanceType === 'meter' ? classes.activeType : classes.notActiveType}
+              onClick={() => setDistanceType('meter')}>
+              <p>в километрах </p>
+            </div>
+            <p className={classes.text}>|</p>
+            <div
+              className={distanceType === 'lunar' ? classes.activeType : classes.notActiveType}
+              onClick={() => setDistanceType('lunar')}>
+              <p>в лунных арбитах</p>
+            </div>
+          </div>
+        </div>
+        {scrollableDataList.map((item: IAsteroidList, i: number) => (
           <AsteroidCard
             date={item.close_approach_data[ 0 ]?.close_approach_date}
             name={item.name}

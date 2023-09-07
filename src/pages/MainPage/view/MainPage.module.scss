@@ -1,0 +1,14 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../assets/earth.png);
+    background-repeat: no-repeat;
+    background-size: 450px;
+    position: relative;
+}
+@media screen and (max-width: 560px) {
+    .wrapper{
+    background-position: 550%;
+    }
+}

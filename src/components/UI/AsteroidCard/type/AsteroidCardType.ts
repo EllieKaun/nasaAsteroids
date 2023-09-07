@@ -6,4 +6,5 @@ export interface IAsteroidCardProps {
     distanceLunar: string
     dangerous: boolean
     type: string
+    buttonCheck?: boolean
 }

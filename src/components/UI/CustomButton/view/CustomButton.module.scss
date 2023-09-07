@@ -1,0 +1,26 @@
+.customButton{ 
+    background-color:rgba(248, 102, 0, 0.15);
+    border: none;
+    border-radius: 16px;
+    padding: 5px 15px;
+    &:hover:enabled{
+        background-color: #f86600;
+        cursor: pointer;
+        p{
+            color: #fff;
+        }
+    }
+    &:disabled{
+        p{
+            color: rgba(248, 102, 0, 1);    
+        }
+    }
+    p{
+        color: #F5DED9;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+}
+
